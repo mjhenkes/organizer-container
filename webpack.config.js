@@ -17,7 +17,7 @@ const terraApplicationConfig = (env = {}) => ({
   plugins: [
     new ModuleFederationPlugin({
       name: 'organizer',
-      filename: 'OrganizerPages.js',
+      filename: 'remoteEntry.js',
       exposes: {
         './PatientList': './src/demo-application/pages/PatientList',
         './PatientSearch': './src/demo-application/pages/PatientSearch',

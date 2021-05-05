@@ -28,7 +28,7 @@ import DynamicHeadingCard from './content/DynamicHeadingCard';
 import Page2 from './Page2';
 
 // const chartURL = 'http://localhost:8080/';
-const chartURL = '/mega-app-1/#/chart';
+const chartURL = '/#/chart';
 const localChartURL = '/chart';
 
 const propTypes = {
@@ -74,12 +74,12 @@ const PatientList = ({ label, pageKey, onRequestClose }) => {
     for (let index = 0; index < 10; index += 1) {
       patients.push((
         <Item key={index}>
-          <Hyperlink
+          {/* <Hyperlink
             href={`${chartURL}?${index}`}
             style={{ padding: '.5rem' }}
           >
             {`Patient ${index}`}
-          </Hyperlink>
+          </Hyperlink> */}
           <Hyperlink
             href={`${chartURL}?${index}`}
             style={{ padding: '.5rem' }}
@@ -89,17 +89,17 @@ const PatientList = ({ label, pageKey, onRequestClose }) => {
               return false;
             }}
           >
-            SPA Hyperlink
+            {`Patient ${index}`}
           </Hyperlink>
           <Hyperlink
             href={`${chartURL}?${index}`}
             variant="external"
             target="_blank"
             style={{ padding: '.5rem' }}
-          >
-            New Tab
-          </Hyperlink>
-          <Hyperlink
+          />
+
+          {/* </Hyperlink> */}
+          {/* <Hyperlink
             href={`${chartURL}?${index}`}
             variant="external"
             target={`Patient ${index}`}
@@ -116,7 +116,7 @@ const PatientList = ({ label, pageKey, onRequestClose }) => {
             style={{ padding: '.5rem' }}
           >
             New Tab same target
-          </Hyperlink>
+          </Hyperlink> */}
         </Item>
       ));
     }
