@@ -1,1 +1,0 @@
-(self.webpackChunkorganizer_container=self.webpackChunkorganizer_container||[]).push([[9784],{69784:(e,n,a)=>{"use strict";a.r(n),a.d(n,{default:()=>c});var t=a(15901),l=a.n(t),r=a(35029);const c=function(){return l().createElement(r.CardLayout,null,l().createElement(r.Card,null,l().createElement("p",null,"This content is dynamically loaded using React.lazy/Suspense.")))}}}]);

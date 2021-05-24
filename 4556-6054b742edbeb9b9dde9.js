@@ -1,1 +1,0 @@
-(self.webpackChunkorganizer_container=self.webpackChunkorganizer_container||[]).push([[4556],{73817:(e,n,r)=>{"use strict";var a=r(95318);Object.defineProperty(n,"__esModule",{value:!0}),n.default=void 0;var t=a(r(15901)),u=function(e){return t.default.createElement("div",null)};n.default=u}}]);
