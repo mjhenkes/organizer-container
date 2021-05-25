@@ -14,7 +14,9 @@ import Page, {
 import PendingActionsCard from './content/PendingActionsCard';
 
 // const chartURL = 'http://localhost:8080/';
-const chartURL = '/#/chart';
+// this only works with current hash routing pattern.
+const chartURL = `${window.location.pathname}#/chart`;
+// const chartURL = '/#/chart';
 // const chartURL = '/mega-app-2/#/chart';
 const localChartURL = '/chart';
 
@@ -25,18 +27,6 @@ const propTypes = {
 };
 
 const PatientList = ({ label, pageKey, onRequestClose }) => {
-  const [metaData, setMetaData] = React.useState({ update_timestamp: Date.now() });
-
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setMetaData({ update_timestamp: Date.now() });
-    }, 1000);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
-
   const history = useHistory();
 
   const getPatients = () => {
@@ -97,10 +87,12 @@ const PatientList = ({ label, pageKey, onRequestClose }) => {
     <Page
       pageKey={pageKey}
       label={label}
-      metaData={metaData}
       onRequestClose={onRequestClose}
     >
       <CardLayout>
+        <Card label="A Local Section">
+          <div>Stuff from actual local.</div>
+        </Card>
         <Card label="May 1st">
           <List dividerStyle="bottom-only">
             { getPatients() }

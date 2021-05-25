@@ -13,39 +13,25 @@ const propTypes = {
   onRequestClose: PropTypes.func,
 };
 
-const Page1 = ({ label, pageKey, onRequestClose }) => {
-  const [metaData, setMetaData] = React.useState({ update_timestamp: Date.now() });
-
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setMetaData({ update_timestamp: Date.now() });
-    }, 1000);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
-
-  return (
-    <Page
-      pageKey={pageKey}
-      label={label}
-      metaData={metaData}
-      onRequestClose={onRequestClose}
-    >
-      <CardLayout>
-        <Card>
-          <p>Page 1 demonstrates the following features:</p>
-          <ul>
-            <li>Page header action that presents a modal workflow</li>
-            <li>Content that triggers Page APIs</li>
-          </ul>
-        </Card>
-        <ApplicationInfoCard />
-      </CardLayout>
-    </Page>
-  );
-};
+const Page1 = ({ label, pageKey, onRequestClose }) => (
+  <Page
+    pageKey={pageKey}
+    label={label}
+    // metaData={metaData}
+    onRequestClose={onRequestClose}
+  >
+    <CardLayout>
+      <Card>
+        <p>LOCAL Page 1 demonstrates the following features:</p>
+        <ul>
+          <li>Page header action that presents a modal workflow</li>
+          <li>Content that triggers Page APIs</li>
+        </ul>
+      </Card>
+      <ApplicationInfoCard />
+    </CardLayout>
+  </Page>
+);
 
 Page1.propTypes = propTypes;
 
