@@ -1,0 +1,48 @@
+{
+  "applications": {
+    "test-application": {
+      "id": "test-application",
+      "title": "Test Application",
+      "version": "0.0.1",
+      "route": "test-application",
+      "requiresPatientContext": false,
+      "modules": {
+        "pages": [
+          {
+            "navigationKey": "my-day",
+            "label": "My Day",
+            "moduleKey": "MyDay"
+          }, {
+              "navigationKey": "patient-search",
+              "label": "Patient Search",
+              "moduleKey": "PatientSearch"
+          }
+        ]
+      }
+    }
+  },
+  "modules": {
+    "pages": {
+      "MyDay": {
+        "url": "/remoteEntry.js",
+        "scope": "organizer",
+        "module": "./PatientList"
+
+      },
+      "PatientSearch": {
+        "url": "/remoteEntry.js",
+        "scope": "organizer",
+        "module": "./PatientSearch"
+      }
+    },
+    "workspaceItems": {
+
+    },
+    "extensions": {
+
+    },
+    "workflowSummaryItems": {
+
+    }
+  }
+}

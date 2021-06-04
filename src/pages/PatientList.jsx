@@ -90,9 +90,9 @@ const PatientList = ({ label, pageKey, onRequestClose }) => {
       onRequestClose={onRequestClose}
     >
       <CardLayout>
-        <Card label="A Local Section">
-          <div>Stuff from actual local.</div>
-        </Card>
+        {/* <Card label="A Local Section">
+          <div> Hi  Matt Stuff from actual local. With sweet ux changes!</div>
+        </Card> */}
         <Card label="May 1st">
           <List dividerStyle="bottom-only">
             { getPatients() }
